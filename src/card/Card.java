@@ -14,39 +14,36 @@ package card;
  * @author srinivsi
  */
 public class Card {
+    // Constants for suit names
+    public static final String[] SUITS = {"Hearts", "Diamonds", "Clubs", "Spades"};
+    
+    // Properties of the card
+    private int value; // 1-13, where 1 is Ace, 11 is Jack, etc.
+    private String suit; // Suit of the card (Hearts, Diamonds, Clubs, Spades)
 
-   private String suit; //clubs, spades, diamonds, hearts
-   private int value;//1-13
-
-   public static final String [] SUITS = {"Hearts", "Diamonds", "Spades", "Clubs"};
-    /**
-     * @return the suit
-     */
-    public String getSuit() {
-        return suit;
-    }
-
-    /**
-     * @param suit the suit to set
-     */
-    public void setSuit(String suit) {
-        this.suit = suit;
-    }
-
-    /**
-     * @return the value
-     */
+    // Getter for value
     public int getValue() {
         return value;
     }
 
-    /**
-     * @param value the value to set
-     */
+    // Setter for value
     public void setValue(int value) {
         this.value = value;
     }
-   
-   
-    
+
+    // Getter for suit
+    public String getSuit() {
+        return suit;
+    }
+
+    // Setter for suit
+    public void setSuit(String suit) {
+        this.suit = suit;
+    }
+
+    // To display the card as a string (e.g., "Ace of Hearts")
+    @Override
+    public String toString() {
+        return value + " of " + suit;
+    }
 }
