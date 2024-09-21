@@ -60,7 +60,16 @@ public class CardTrick {
         } else {
             System.out.println("Sorry, your card is not in the magic hand.");
         }
-         // Hard-coded lucky card
-Card luckyCard = new Card(7, 2);
+        // Create a lucky card and check if it's in the magic hand
+        Card luckyCard = new Card(7, 2); // 7 of Clubs
+        boolean luckyFound = false;
+        for (Card card : magicHand) {
+            if (card.getValue() == luckyCard.getValue() && card.getSuit().equals(luckyCard.getSuit())) {
+                luckyFound = true;
+                break;
+            }
+        }
+         
+
     }
 }
