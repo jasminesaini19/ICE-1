@@ -55,8 +55,12 @@ public class CardTrick {
         // Output result
         if (found) {
             System.out.println("Your card is in the magic hand!");
+
+        
         } else {
             System.out.println("Sorry, your card is not in the magic hand.");
         }
+         // Hard-coded lucky card
+Card luckyCard = new Card(7, 2);
     }
 }
