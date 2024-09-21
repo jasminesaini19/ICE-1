@@ -24,6 +24,16 @@ public class Card {
     // Properties of the card
     private int value; // 1-13, where 1 is Ace, 11 is Jack, etc.
     private String suit; // Suit of the card (Hearts, Diamonds, Clubs, Spades)
+    
+    public Card(int value, int suitIndex) {
+        this.value = value;
+        this.suit = SUITS[suitIndex]; // Set the suit based on the index
+    }
+
+    // Default constructor (optional)
+    public Card() {
+        // You can initialize with default values if needed
+    }
 
     // Getter for value
     public int getValue() {
@@ -51,3 +61,5 @@ public class Card {
         return value + " of " + suit;
     }
 }
+
+   
